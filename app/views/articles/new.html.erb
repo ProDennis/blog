@@ -1,0 +1,7 @@
+<div class="container">
+	<h1>New Article</h1>
+	
+	<%= simple_form_for @article, url: articles_path, method: :post do |f| %>
+  	<%= render partial: "articles/partials/form", locals: {f: f}%>
+	<% end %>
+</div>

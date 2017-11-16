@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'articles/index'
+
+  get 'articles/new'
+
+  get 'articles/edit'
+
+  get 'home/index'
+
   root 'home#index'
 
   #Routes of articles
