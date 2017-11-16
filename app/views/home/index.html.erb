@@ -1,11 +1,34 @@
 <section class="body">
 	<div class="container">
 		<h1>Blog</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus eum assumenda id doloribus repudiandae unde quidem tenetur laboriosam est delectus debitis consequuntur itaque esse harum, totam, rem accusamus, cumque. Dolores.</p>
-	</div>
-</section>
-<style>
-	.body{
-		background-color: #4285f4;
-	}
-</style>
+		<div class="container">
+			<h1>Articles<div class="pull-right">
+			</div></h1>
+			<div class="row">
+				<div class="col-md-8">
+				<%@articles.each do |article|%>
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title"><%=article.title%> <%=link_to "<i class='fa fa-external-link' aria-hidden='true'></i>".html_safe, article_path(article), class: "pull-right"%></h3>
+						</div>
+						<div class="panel-body">
+							<p><%=article.body.truncate(255).html_safe%></p>
+						</div>
+						<div class="panel-footer">
+								<i><%=time_ago_in_words(article.created_at) %></i>
+						</div>
+					</div>
+				<%end%>
+				</div>
+			</div>
+		</div>
+		<style>
+		.panel{
+			border-radius: 0px !important;
+		}
+	</style>
+	<script>
+		$( document ).ready(function() {
+			$("img").addClass("img-responsive");
+		});
+	</script>

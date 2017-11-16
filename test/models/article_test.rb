@@ -8,6 +8,8 @@
 #  visits_count :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  is_deleted   :boolean          default("false")
+#  description  :text
 #
 
 require 'test_helper'

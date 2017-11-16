@@ -1,2 +1,11 @@
-<h1>Articles#edit</h1>
-<p>Find me in app/views/articles/edit.html.erb</p>
+<div class="container">
+	<h1>Edit Article</h1>
+	
+	<%= simple_form_for(@article, url: article_path(@article), method: :put) do |f| %>
+  	<%= render partial: "articles/partials/form", locals: {f: f}%>
+  	<div class="form-group">
+			<%= link_to "Back", articles_path, class: "btn btn-warning pull-left"%>
+			<%= f.button :submit, class: "btn btn-primary pull-right" %>
+		</div>
+	<% end %>
+</div>
