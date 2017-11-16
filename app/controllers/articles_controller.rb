@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:edit]
+  before_action :set_article, only: [:edit,:show]
 
   def index
   	@articles = Article.all
@@ -10,6 +10,9 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+  end
+
+  def show
   end
 
   def create

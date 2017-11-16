@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+<style>
+.navbar {
+	border-radius: 0px !important;
+	margin-bottom: 0px !important;
+}
+.btn{
+	border-radius: 0px !important;
+}
+.form-control{
+	border-radius: 0px !important;
+}
+</style>

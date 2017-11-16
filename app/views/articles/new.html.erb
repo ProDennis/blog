@@ -3,5 +3,9 @@
 	
 	<%= simple_form_for @article, url: articles_path, method: :post do |f| %>
   	<%= render partial: "articles/partials/form", locals: {f: f}%>
+  	<div class="form-group">
+			<%= link_to "Back", articles_path, class: "btn btn-warning pull-left"%>
+			<%= f.button :submit, class: "btn btn-primary pull-right" %>
+		</div>
 	<% end %>
 </div>
